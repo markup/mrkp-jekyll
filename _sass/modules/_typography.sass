@@ -1,0 +1,22 @@
+@mixin secondary-type()
+  font-family: "brandon-grotesque", sans-serif
+  text-transform: uppercase
+  font-style: normal
+  @include rempx(font-size,12)
+
+@mixin type-size($size)
+  $size-lead: null !default
+  @if $size == "larger"
+    $size: $larger-type
+    $size-lead: $larger-type-lead
+  @else if $size == "largest"
+    $size: $largest-type
+    $size-lead: $largest-type-lead
+  @else if $size == "regular"
+    $size: $regular-type
+    $size-lead: $regular-type-lead
+  @include rempx(font-size,$size*0.8)
+  @include rempx(line-height,$size-lead*0.9)
+  @include mobile-landscape-and-up
+    @include rempx(font-size,$size)
+    @include rempx(line-height,$size-lead)

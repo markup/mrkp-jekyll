@@ -1,0 +1,14 @@
+---
+layout: default
+title: /ideas — Thoughts on design, development and how these interact
+---
+
+div#home
+  h1 Blog Posts
+  ul.posts
+    {% for post in site.posts %}
+      li
+        span
+          | {{ post.date | date_to_string }} &raquo; 
+          a href="{{ post.url }}" {{ post.title }}
+    {% endfor %}

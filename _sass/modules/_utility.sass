@@ -1,0 +1,58 @@
+@mixin rempx($property,$value,$unit:"px")
+  $pxcon: null !default
+  $remcon: null !default
+  $px: null !default
+  $rem: null !default
+
+  @if $unit == "px"
+    $pxcon: 1
+    $remcon: .1
+  @else
+    $pxcon: 10
+    $remcon: 1
+
+  @if type-of($value) == "number"
+    $px: #{($value * $pxcon)}px
+    $rem: #{($value * $remcon)}rem
+  @else
+    @each $val in $value
+      @if $px == null
+        @if type-of($val) == "number"
+          $px: #{($val * $pxcon)}px
+          $rem: #{($val * $remcon)}rem
+        @else
+          $px: #{$val}
+          $rem: #{$val}
+      @else
+        @if type-of($val) == "number"
+          $px: $px + " #{($val * $pxcon)}px"
+          $rem: $rem + " #{($val * $remcon)}rem"
+        @else
+          $px: $px + " #{$val}"
+          $rem: $rem + " #{$val}"
+
+  #{$property}: #{$px}
+  #{$property}: #{$rem}
+
+@mixin proportional-magic($height)
+  position: relative
+  overflow: hidden
+  .dummy
+    width: 100%
+    height: 0
+    margin-top: $height
+  .dummy-content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+
+// This is not possible until Sass 3.3:
+// @mixin project($name,$reverse: false)
+//   background-color: $#{$name}-back
+//   h2, h3, .highlight
+//     color: $#{$name}-fore
+//   a
+//     @include basic-link($#{$name}-fore)

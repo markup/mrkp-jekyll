@@ -1,0 +1,7 @@
+name: /markup
+markdown: maruku
+pygments: true
+exclude: ['Gemfile*', 'sass', 'README.md', '.gitignore']
+destination: ./public
+permalink: /ideas/:title
+author: Alfonso Gómez-Arzola

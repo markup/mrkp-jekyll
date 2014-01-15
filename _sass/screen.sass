@@ -1,0 +1,609 @@
+@import "compass/reset"
+@import "compass/css3/border-radius"
+@import "compass/css3/transition"
+@import "compass/utilities/general/clearfix"
+@import "modules/all"
+
+html
+  font-size: 62.5%
+  -webkit-font-smoothing: antialiased
+
+body
+  font-family: "adelle", serif
+  font-style: italic
+  @include type-size(regular)
+  color: $dark-gray
+
+h1, h3
+  @include secondary-type
+
+h2
+  @include type-size(largest)
+  @include rempx(margin-top,8)
+
+p
+  @include rempx(margin-top,14)
+  &.callout
+    @include type-size(largest)
+    color: $magenta
+    clear: left
+    width: 100% !important
+    max-width: none !important
+  &.secondary
+    @include type-size(regular)
+
+.left
+  @include tablet-portrait-and-up
+    float: left
+
+.right
+  @include tablet-portrait-and-up
+    float: right
+
+a
+  @include basic-link($magenta)
+
+hr
+  border: none
+  border-top: 1px solid $light-gray
+  @include rempx(margin,40 0 30)
+
+blockquote
+  @include type-size(regular)
+  // @include clearfix
+  @include rempx(margin-top,33)
+  @include rempx(max-width,460)
+  margin-left: auto
+  margin-right: auto
+  font-style: normal
+  overflow: visible
+  p
+    position: relative
+    z-index: 10
+    @include mobile-landscape-and-up
+      width: 65%
+      margin-left: 0 !important
+      float: left
+    @include tablet-portrait-and-up
+      width: 75%
+    &.cite
+      width: 100%
+      margin: 0
+      clear: right
+      float: right
+      text-align: right
+    &:first-of-type
+      &:before
+        content: "“"
+        color: $light-gray
+        @include rempx(font-size,200)
+        position: absolute
+        @include rempx(top,60)
+        @include rempx(left,-28)
+        z-index: -1
+        @include mobile-landscape-and-up
+          @include rempx(left,-28)
+        @include tablet-portrait-and-up
+          @include rempx(left,-40)
+        @include tablet-landscape-and-up
+          @include rempx(left,-54)
+  hr
+    clear: both
+    border: none
+  cite
+    float: right
+    display: block
+    @include type-size(larger)
+    span
+      display: block
+      font-style: italic
+      @include type-size(regular)
+  figure
+    width: 100%
+    height: auto
+    overflow: hidden
+    // clear: both
+    @include border-radius(2px)
+    @include rempx(margin-top,18)
+    @include rempx(margin-bottom,20)
+    @include mobile-landscape-and-up
+      float: right
+      clear: none
+      width: 33%
+    @include tablet-portrait-and-up
+      width: 22%
+    img
+      width: 100%
+      height: auto
+      display: block
+  @include tablet-portrait-and-up
+    max-width: none
+
+.container
+  @include rempx(margin,0 auto)
+  @include rempx(max-width,1024)
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 20
+  background-color: darken($dark-gray,10%)
+  background-color: rgba(darken($dark-gray,10%),0.95)
+  @include rempx(min-height,48)
+  @include tablet-portrait-and-up
+    background-color: rgba(darken($dark-gray,10%),0.2)
+    @include single-transition(background-color,0.2s,ease)
+    &:hover, &.top
+      background-color: rgba(darken($dark-gray,10%),0.87)
+      nav
+        @include rempx(margin-top,12)
+        opacity: 1
+  h1
+    float: left
+    color: transparent
+    text-indent: -100000px
+    @include rempx(width,164)
+    @include rempx(height,48)
+    background-image: url("../images/markup-logo.png")
+
+nav
+  clear: left
+  height: 0
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  padding-top: 48px
+  border: none
+  @include single-transition(height,0.45s,ease)
+  &:target
+    @include rempx(height,800)
+    a.deactivate-menu
+      z-index: 12
+  @include tablet-portrait-and-up
+    clear: none
+    float: right
+    height: auto
+    opacity: 0
+    padding: 0
+    overflow: visible
+    @include rempx(margin,0 0 0)
+    @include transition(margin-top 0.30s ease,opacity 0.30s ease)
+    &:target
+      height: auto
+  ol
+    background-color: darken($dark-gray,10%)
+    background-color: rgba(darken($dark-gray,10%),0.95)
+    @include tablet-portrait-and-up
+      background-color: transparent
+      float: right
+  li
+    @include rempx(padding,24 28)
+    position: relative
+    border-top: 1px solid $dark-gray
+    @include tablet-portrait-and-up
+      display: inline
+      padding: 0
+      border-top: none
+    a
+      @include basic-link($light-gray,$light-gray,$light-gray,plain)
+      @include secondary-type
+      @include single-transition(color,1s,ease)
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 14
+      @include rempx(padding,12 18)
+      &:hover
+        border-bottom: 1px solid transparent
+        color: $cyan
+      @include tablet-portrait-and-up
+        position: relative
+
+a.activate-menu
+  color: transparent
+  text-indent: -100000px
+  border: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10
+  @include tablet-portrait-and-up
+    display: none
+
+a.deactivate-menu
+  color: transparent
+  text-indent: -100000px
+  border: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 9
+  @include tablet-portrait-and-up
+    display: none
+
+section
+  position: relative
+  @include clearfix
+  @include rempx(padding,90 18)
+  &.intro
+    background-color: $dark-gray
+    background-image: url("/images/Alfonso.jpg")
+    background-position: 70% top
+    background-size: cover
+    background-repeat: no-repeat
+    // background-attachment: fixed
+    color: $cyan
+    @include type-size(larger)
+    @include rempx(padding-top,230)
+    @include transition(background-position-y 0.35s ease, padding-top 0.35s ease)
+    p
+      @include rempx(max-width,420)
+    a
+      @include basic-link(#fff,#fff,#fff)
+    @include tablet-landscape-and-up
+      @include rempx(padding-top,130)
+    @include desktop-and-up
+      background-position: center -30px
+    @include monster
+      background-position: center -100px
+  &.philosophy
+    @include type-size(larger)
+    p, h1
+      @include rempx(max-width,460)
+      margin-left: auto
+      margin-right: auto
+    @include tablet-portrait-and-up
+      p, h1
+        max-width: none
+      .left
+        width: 48%
+        float: left
+        clear: left
+      .right
+        width: 33%
+        float: right
+        clear: none
+        @include rempx(margin,18 0 -4 0)
+        margin-right: 15%
+  &.work
+    padding: 0
+    h1
+      display: none
+    article
+      position: relative
+      @include clearfix
+      p, hgroup
+        @include rempx(max-width,460)
+        margin-left: auto
+        margin-right: auto
+        z-index: 10
+        clear: both
+      .container
+        @include rempx(padding,40 18 90)
+        @include tablet-portrait-and-up
+          @include rempx(padding,90 0)
+          position: relative
+          @include clearfix
+      .showcase
+        width: 100%
+        @include tablet-portrait-and-up
+          position: absolute
+          top: 0
+          bottom: 0
+          width: 60%
+      figure
+        display: block
+        position: relative
+        @include transition(margin 0.35s ease, width 0.35s ease)
+        // top: 4%
+        // left: 0
+        // right: 0
+        &::before
+          content: " "
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center top
+          z-index: 10
+        .mask
+          overflow-x: hidden
+          overflow-y: hidden
+          border: 1px solid #ededed
+          position: relative
+          z-index: 10
+          &::-webkit-scrollbar
+            display: none
+          img
+            display: block
+            width: 100%
+            z-index: 5
+          @include mobile-landscape-and-up
+            overflow-y: auto !important
+        &.scroll
+          @include mobile-landscape-and-up
+            &::after
+              content: "⇕"
+              color: rgba(#fff,0.8)
+              text-align: center
+              font-weight: bold
+              @include rempx(font-size,72)
+              @include rempx(padding-top,70)
+              font-style: normal
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              z-index: 10
+              @include transition(color 0.35s ease,z-index 0s ease)
+          @include tablet-landscape-and-up
+            &::after
+              @include rempx(padding-top,120)
+        &:hover
+          &.scroll
+            &::after
+              color: transparent !important
+              z-index: 0
+              @include transition(color 0.35s ease,z-index 0s ease 0.35s)
+        &.laptop
+          @include proportional-magic(58%)
+          width: 92%
+          margin: 6% auto
+          .mask
+            height: 80%
+            width: 74%
+            margin: 2.9% auto
+            img
+              display: block
+              width: 100%
+          &::before
+            background-image: url("/images/devices_laptop.png")
+          @include tablet-portrait-and-up
+            width: 94%
+            margin-left: 19%
+            margin-right: 0
+            float: right
+            @include rempx(margin-top,90)
+            @include rempx(max-width,1000)
+          @include tablet-landscape-and-up
+            margin-bottom: -10%
+        &.tablet
+          @include proportional-magic(180%)
+          // position: absolute
+          width: 36%
+          margin: -30% 0 0 24%
+          float: left
+          .mask
+            height: 76%
+            width: 84%
+            margin: 12% auto
+          &::before
+            background-image: url("/images/devices_tablet.png")
+          @include tablet-portrait-and-up
+            width: 34%
+            @include rempx(max-width,380)
+          @include tablet-landscape-and-up
+            margin-top: -19%
+            margin-right: 12%
+        &.phone
+          @include proportional-magic(180%)
+          // position: absolute
+          width: 24%
+          margin: -16% -20%
+          .mask
+            height: 76%
+            width: 84%
+            margin: 18% auto
+          &::before
+            background-image: url("/images/devices_phone.png")
+          @include tablet-portrait-and-up
+            width: 28%
+            @include rempx(max-width,240)
+      .highlight
+        @include type-size(larger)
+      &.right-layout
+        @include tablet-portrait-and-up
+          p, hgroup
+            @include rempx(max-width,310)
+          .container
+            float: right
+            width: 38%
+            margin-right: 2%
+            p, hgroup
+              margin-left: 18px
+          .showcase
+            left: 0
+          figure
+            &.laptop
+              @include tablet-portrait-and-up
+                margin-left: 19%
+                margin-right: 0
+                float: right
+            &.tablet
+              margin: -30% 0 0 24%
+              float: left
+              @include tablet-landscape-and-up
+                margin-right: 12%
+            &.phone
+              margin: -16% -20%
+      &.left-layout
+        @include tablet-portrait-and-up
+          p, hgroup
+            @include rempx(width,310)
+            float: left
+            clear: left
+          .container
+            float: left
+            width: 38%
+            margin-left: 2%
+            p, hgroup
+              float: right
+              clear: right
+              margin-right: 18px
+          .showcase
+            right: 0
+          figure
+            &.laptop
+              @include tablet-portrait-and-up
+                margin-right: 19%
+                margin-left: 0
+                float: left
+            &.tablet
+              margin: -20% 24% 0 0
+              float: right
+              @include tablet-landscape-and-up
+                margin-left: 12%
+            &.phone
+              margin: -16% -20% 0 55%
+              @include tablet-portrait-and-up
+                margin-left: 65%
+      &.center-layout
+        @include tablet-portrait-and-up
+          .container
+            float: none
+            margin-left: auto
+            margin-right: auto
+  &.collaborators, &.ideas, &.contact
+    @include type-size(larger)
+    p, h1, article
+      @include rempx(max-width,460)
+      margin-left: auto
+      margin-right: auto
+    @include tablet-portrait-and-up
+      p, h1, article
+        max-width: none
+        margin-left: 0
+        margin-right: 0
+      p
+        @include rempx(max-width,550)
+      .left
+        clear: left
+        width: 32%
+      .right
+        clear: none
+        width: 64%
+  &.ideas
+    background-color: $dark-gray
+    h1, p
+      color: $cyan
+    h2
+      color: $light-gray
+      font-style: normal
+    article
+      p
+        color: $light-gray
+  &.contact
+    .left
+      p
+        @include type-size(larger)
+
+.launch-project
+  display: block
+  text-align: center
+  font-style: normal
+  @include secondary-type
+  font-size: 1.4em
+  border: none !important
+  color: white
+  @include border-radius(2px)
+  @include rempx(padding,18 0)
+
+#wfgc
+  background-color: $wfgc-back
+  h2, h3, .highlight
+    color: $wfgc-fore
+  a
+    @include basic-link($wfgc-fore)
+  .scroll::after
+    color: rgba($wfgc-fore,0.6)
+  a.launch-project
+    color: $wfgc-back !important
+    background-color: $wfgc-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #fff !important
+
+#phive
+  background-color: #000
+  color: $light-gray
+  background-image: url("/images/work_paperhive.jpg")
+  background-position: center top
+  background-size: cover
+  h2, h3, .highlight
+    color: $phive
+  a
+    @include basic-link($phive)
+  a.launch-project
+    color: #000 !important
+    background-color: $phive
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #fff !important
+
+#sow
+  background-color: $sow-back
+  h2, h3, .highlight
+    color: $sow-fore
+  a
+    @include basic-link($sow-fore)
+  .mask
+    background-color: $sow-back
+  a.launch-project
+    color: $sow-back !important
+    background-color: $sow-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #fff !important
+
+#gridwell
+  background-color: $gridwell-back
+  color: $light-gray
+  h2, h3, .highlight
+    color: $gridwell-fore
+  a
+    @include basic-link($gridwell-fore)
+  figure
+    background-image: url("/images/work_gridwell.jpg")
+  a.launch-project
+    color: $gridwell-back !important
+    background-color: $gridwell-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #000 !important
+
+#soloff
+  background-color: $soloff-back
+  background-image: url("/images/work_soloff.jpg")
+  background-position: center top
+  background-size: cover
+  h2, h3, .highlight
+    color: $soloff-fore
+  a
+    @include basic-link($soloff-fore)
+  a.launch-project
+    color: $soloff-back !important
+    background-color: $soloff-fore
+    @include transition(color 0.35s ease)
+    &:hover
+      color: #bbb !important
+
+#asoplace
+  background-color: $asoplace-back
+  h2, h3, .highlight
+    color: $asoplace-fore
+  a
+    @include basic-link($asoplace-fore)

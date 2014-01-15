@@ -1,0 +1,17 @@
+@mixin basic-link($color: $link-color, $visited: $color, $hover: $color, $decoration: "underline")
+  &:link
+    color: $color
+    text-decoration: none
+    @include single-transition(border-bottom,0.2s,ease)
+    @if $decoration == "underline"
+      border-bottom: 1px solid $color
+    @if $decoration == "plain"
+      border-bottom: 1px solid transparent
+  &:visited
+    color: $visited
+  &:hover
+    color: $hover
+    @if $decoration == "underline"
+      border-bottom: 1px solid transparent
+    @if $decoration == "plain"
+      border-bottom: 1px solid $color
