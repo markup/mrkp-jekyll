@@ -1,6 +1,7 @@
 ---
 layout: home
 title: /markup — Design & development by Alfonso Gómez-Arzola
+date: 2014-01-15
 ---
 
 section#intro.intro
@@ -197,10 +198,10 @@ section#ideas.ideas
         
         {: .secondary}Here’s my latest post:
     article.right
-      h2 We need to deliver better CMS experiences.
-      p “I just don’t understand how to use my website’s CMS.” This, or some variation of it, is a gripe I hear frighteningly often from prospective clients. I’ve had clients tell me they’ve never —not since day one— managed to grasp the basic workings of their CMS. This is unacceptable.
+      h2: a href="{{ site.posts.first.url }}" title="Go read ‘{{ site.posts.first.title }}’" {{ site.posts.first.title }}
+      p {{ site.posts.first.excerpt }}
       p
-        a href="/ideas/better-cms-experiences" title="Go read 'We need to deliver better CMS experiences.'" Read more…
+        a href="{{ site.posts.first.url }}" title="Go read ‘{{ site.posts.first.title }}’" Read more…
 
 section#contact.contact
   .container
