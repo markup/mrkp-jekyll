@@ -139,7 +139,6 @@ header
     &:hover, &.top
       background-color: rgba(darken($dark-gray,10%),0.87)
       nav
-        @include rempx(margin-top,12)
         opacity: 1
   h1
     float: left
@@ -168,11 +167,11 @@ nav
     clear: none
     float: right
     height: auto
-    opacity: 0
+    opacity: 0.3
     padding: 0
     overflow: visible
-    @include rempx(margin,0 0 0)
-    @include transition(margin-top 0.30s ease,opacity 0.30s ease)
+    @include rempx(margin-top,12)
+    @include transition(opacity 0.30s ease)
     &:target
       height: auto
   ol
