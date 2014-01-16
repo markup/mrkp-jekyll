@@ -135,11 +135,16 @@ header
   @include rempx(min-height,48)
   @include tablet-portrait-and-up
     background-color: rgba(darken($dark-gray,10%),0.2)
-    @include single-transition(background-color,0.2s,ease)
+    @include single-transition(background-color,0.25s,ease)
     &:hover, &.top
       background-color: rgba(darken($dark-gray,10%),0.87)
       nav
         opacity: 1
+        a:link, a:visited
+          color: $light-gray
+        a:hover
+          color: $cyan
+          border-bottom-color: $cyan
   h1
     float: left
     color: transparent
@@ -189,9 +194,9 @@ nav
       padding: 0
       border-top: none
     a
-      @include basic-link($light-gray,$light-gray,$light-gray,plain)
+      @include basic-link($light-gray,$light-gray,$cyan,plain)
       @include secondary-type
-      @include single-transition(color,1s,ease)
+      @include single-transition(color,0.35s,ease)
       position: absolute
       top: 0
       left: 0
@@ -199,11 +204,9 @@ nav
       bottom: 0
       z-index: 14
       @include rempx(padding,12 18)
-      &:hover
-        border-bottom: 1px solid transparent
-        color: $cyan
       @include tablet-portrait-and-up
         position: relative
+        @include basic-link(darken($light-gray,30%),darken($light-gray,30%),$cyan,plain)
 
 a.activate-menu
   color: transparent
