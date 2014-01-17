@@ -1,8 +1,8 @@
 .blog
   font-style: normal
   padding-bottom: 90px
-  @include rempx(font-size,18)
-  @include rempx(line-height,26)
+  // @include rempx(font-size,18)
+  // @include rempx(line-height,26)
   // color: lighten($dark-gray,8%)
   .container
     @include rempx(margin, 0 auto)
@@ -31,8 +31,25 @@
       @include basic-link($magenta,$magenta,$magenta,plain)
 
 .post
-  @include rempx(max-width,680)
-  margin: 0 auto
+  p, h1, h2, h3, h4, h5, h6, ol, ul, blockquote, aside, hr
+    @include rempx(max-width,680)
+    @include rempx(margin,14 auto)
+    padding: 0
+
+  p
+    text-indent: 4em
+    &.callout
+      text-indent: 0
+      font-style: italic
+      text-align: center
+      border-top: 1px solid #ededed
+      border-bottom: 1px solid #ededed
+      @include rempx(padding,18 0 20)
+      margin: 18px 0
+      @include mobile-landscape-and-up
+        @include rempx(padding,36 0 40)
+        margin: 36px 10%
+        width: auto !important
 
   em
     font-style: italic
@@ -56,16 +73,16 @@
   li
     margin: 0.6em 1em
 
-  p
-    text-indent: 1em
-
   h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, hr + p, p:first-of-type
     text-indent: 0
     margin-top: 0
 
   h2, h3, h4, h5, h6
-    margin-right: 15%
+    // padding-right: 15%
+    margin-top: 2em
 
+  hr
+    @include rempx(margin,36 auto)
   code
     font-family: Courier, mono
     color: #000
@@ -118,7 +135,7 @@
       z-index: 10
       @include secondary-type
       a
-        @include basic-link($cyan, $cyan, $light-gray, plain)
+        @include basic-link($cyan, $cyan, $cyan, plain)
     &::after
       content: " "
       position: absolute
