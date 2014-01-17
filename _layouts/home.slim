@@ -3,7 +3,7 @@ html
   head
     | {% slim _document_head.slim %}
     title
-      | {{ site.title }}
+      | {{ site.name }}
 body.home
   | {% slim _site_header.slim %}
   | {{ content }}
