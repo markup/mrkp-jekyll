@@ -1,13 +1,15 @@
 ---
-layout: default
+layout: post
 title: "We need to deliver better CMS experiences."
 date: 2014-01-15 23:11:11
 excerpt: "“I just don’t understand how to use my website’s CMS.” This, or some variation of it, is a gripe I hear all too often from prospective clients. I’ve actually had clients tell me they’ve never —not since day one— managed to feel confident using their website’s CMS. What’s up with that?"
+image: "/images/blog/control-room.jpg"
+image-caption: 'Photo Credit: <a href="http://www.flickr.com/photos/10614970@N07/4736217078/">howzey</a> via <a href="http://compfight.com">Compfight</a> <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a>'
 ---
 
 We strive to deliver the best experiences for our clients’ users. Websites are snappy and responsive, content is accessible and presented beautifully, launch goes without a hitch. The project is a success… Eventually, our client gets their hands on it and they have no idea what they’re doing, so they improvise: They dump content where it doesn’t belong, spend countless hours figuring out how the formatting on the editor will translate to the front-end, and finally come up with a list of little tricks that make the site behave in a certain way that is contrary to our intentions, but which they think somehow enhances the content. And that’s when the site loses its luster.
 
-More times than not, that’s our fault.
+**More times than not, that’s our fault.**
 
 ## WYSInotWYG
 WYSIWYG editors are pretty powerful these days. They can deliver pristine markup, offer clickable tools to add classes and styles, limit the HTML elements people can use, provide templates with pre-defined and pre-populated blocks of content, and —most importantly— provide an accurate, live preview of what the content will look like on the front-end. In my experience, however, many developers deliver WYSIWYG editors with stock stylesheets bearing no resemblance to the front-end, unrestricted access to any number of style modifications (often —if not always— applied with the less-than-desirable `<span style="[…]"></span>` or similar), and no assistive tools to help structure content in ways that comply with the styles and tone set forth by the design.
