@@ -41,14 +41,14 @@ I’ve met with prospective clients whose previous developers handed a website o
 
 Of course, proper training and post-launch support costs money. I wouldn’t suggest we need to be giving away our time and effort. Yet these costs should be factored in from the beginning, itemized in our estimates and described in our proposals, so the client knows that (1) they won’t be left in the dark post-launch, and (2) they won’t be surprised with added cost. I’d wager that very few cients would choose to do without training and support just to save a bit of cash, and those who do at least _know_ they won’t be getting it.
 
-## We don’t let clients in on the _why_s and _why not_s until the very end.
+## We don’t let clients in on the _why_s and _why not_s until it’s too late.
 Mid-project presentations need to be about more than just getting client feedback on what their site looks like and how it behaves under certain circumstances. We need to get them on-board with us regarding what the site _is_ and, more importantly, what the site _is not_. Early discussions about where different types of content should go, what the function of each section is, and the value of using the appropriate spaces for each type of content will go a long way towards establishing content publishing guidelines. Granted: some clients will still stray from these guidelines. In those cases, those post-launch support calls and training sessions I mentioned above provide plenty of opportunity to go over them again.
 
 ---
 
+{: .callout}Building better CMS experiences for our clients is simply good business.
+
 With a good CMS experience, proper training and follow-up, and making sure a client understands the purpose of their site, we inform and empower them. And that’s a good thing, because informed and empowered clients do two really awesome things:
 
-1. **They don’t bug us with the little things.** They’ve been trained, they understand the CMS, they feel secure in their abilities. We needn’t bother with everyday content maintenance tasks. They got this!
+1. **They don’t bug us with the little things.** We needn’t bother with everyday content maintenance tasks. They’ve been trained, they understand the CMS, they feel secure in their abilities. They got this!
 2. **The come back to us for the big things.** Those big challenges are the ones we live for, and their long-term satisfaction makes their decision to hire us again for future projects a no-brainer. Doubleplusgood!
-
-Building better CMS experiences for our clients is simply good business.
