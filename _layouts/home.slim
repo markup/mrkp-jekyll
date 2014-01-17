@@ -1,6 +1,9 @@
 doctype html
 html
-  | {% slim _document_head.slim %}
-body
+  head
+    | {% slim _document_head.slim %}
+    title
+      | {{ site.title }}
+body.home
   | {% slim _site_header.slim %}
   | {{ content }}

@@ -1,22 +1,106 @@
-@mixin secondary-type()
-  font-family: "brandon-grotesque", sans-serif
-  text-transform: uppercase
-  font-style: normal
-  @include rempx(font-size,12)
+.home
+  h1, h3
+    @include secondary-type
 
-@mixin type-size($size)
-  $size-lead: null !default
-  @if $size == "larger"
-    $size: $larger-type
-    $size-lead: $larger-type-lead
-  @else if $size == "largest"
-    $size: $largest-type
-    $size-lead: $largest-type-lead
-  @else if $size == "regular"
-    $size: $regular-type
-    $size-lead: $regular-type-lead
-  @include rempx(font-size,$size*0.8)
-  @include rempx(line-height,$size-lead*0.9)
-  @include mobile-landscape-and-up
-    @include rempx(font-size,$size)
-    @include rempx(line-height,$size-lead)
+h2
+  @include type-size(largest)
+  @include rempx(margin-top,8)
+
+p
+  @include rempx(margin-top,14)
+  &.callout
+    @include type-size(largest)
+    color: $magenta
+    clear: left
+    width: 100% !important
+    max-width: none !important
+  &.secondary
+    @include type-size(regular)
+
+.left
+  @include tablet-portrait-and-up
+    float: left
+
+.right
+  @include tablet-portrait-and-up
+    float: right
+
+a
+  @include basic-link($magenta)
+
+hr
+  border: none
+  border-top: 1px solid $light-gray
+  @include rempx(margin,40 0 30)
+
+blockquote
+  @include type-size(regular)
+  // @include clearfix
+  @include rempx(margin-top,33)
+  @include rempx(max-width,460)
+  margin-left: auto
+  margin-right: auto
+  font-style: normal
+  overflow: visible
+  p
+    position: relative
+    z-index: 10
+    @include mobile-landscape-and-up
+      width: 65%
+      margin-left: 0 !important
+      float: left
+    @include tablet-portrait-and-up
+      width: 75%
+    &.cite
+      width: 100%
+      margin: 0
+      clear: right
+      float: right
+      text-align: right
+    &:first-of-type
+      &:before
+        content: "“"
+        color: $light-gray
+        @include rempx(font-size,200)
+        position: absolute
+        @include rempx(top,60)
+        @include rempx(left,-28)
+        z-index: -1
+        @include mobile-landscape-and-up
+          @include rempx(left,-28)
+        @include tablet-portrait-and-up
+          @include rempx(left,-40)
+        @include tablet-landscape-and-up
+          @include rempx(left,-54)
+  hr
+    clear: both
+    border: none
+  cite
+    float: right
+    display: block
+    @include type-size(larger)
+    span
+      display: block
+      font-style: italic
+      @include type-size(regular)
+  figure
+    width: 100%
+    height: auto
+    overflow: hidden
+    border: 1px solid #ededed
+    // clear: both
+    @include border-radius(2px)
+    @include rempx(margin-top,18)
+    @include rempx(margin-bottom,20)
+    @include mobile-landscape-and-up
+      float: right
+      clear: none
+      width: 33%
+    @include tablet-portrait-and-up
+      width: 22%
+    img
+      width: 100%
+      height: auto
+      display: block
+  @include tablet-portrait-and-up
+    max-width: none

@@ -1,0 +1,18 @@
+---
+layout: blog
+---
+
+section.post-intro
+  figure
+    img src="{{ page.image }}" alt=""
+    figcaption.container
+      | {{ page.image-caption }}
+  .post-header
+    p.meta.container
+      | {{ page.date | date_to_string }}
+    h1.container
+      | {{ page.title }}
+    p.excerpt.container
+      | {{ page.excerpt }}
+section.post
+  | {{ content }}

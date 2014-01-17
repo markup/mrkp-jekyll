@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    | {% slim _document_head.slim %}
+    title
+      | /ideas — Thoughts on design and development by {{ site.author }}
+body.blog
+  | {% slim _blog_header.slim %}
+  | {{ content }}
+  footer
+    hr
+    | {% slim _blog_footer.slim %}

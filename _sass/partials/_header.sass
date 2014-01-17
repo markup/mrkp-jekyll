@@ -1,0 +1,110 @@
+.home
+  header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 20
+    background-color: darken($dark-gray,10%)
+    background-color: rgba(darken($dark-gray,10%),0.95)
+    @include rempx(min-height,48)
+    @include tablet-portrait-and-up
+      background-color: rgba(darken($dark-gray,10%),0.2)
+      @include single-transition(background-color,0.25s,ease)
+      &:hover, &.top
+        background-color: rgba(darken($dark-gray,10%),0.87)
+        nav
+          opacity: 1
+          a:link, a:visited
+            color: $light-gray
+          a:hover
+            color: $cyan
+            border-bottom-color: $cyan
+    h1
+      float: left
+      color: transparent
+      text-indent: -100000px
+      @include rempx(width,164)
+      @include rempx(height,48)
+      background-image: url("../images/markup-logo.png")
+
+  nav
+    clear: left
+    height: 0
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    padding-top: 48px
+    border: none
+    @include single-transition(height,0.45s,ease)
+    &:target
+      @include rempx(height,800)
+      a.deactivate-menu
+        z-index: 12
+    @include tablet-portrait-and-up
+      clear: none
+      float: right
+      height: auto
+      opacity: 0.5
+      padding: 0
+      overflow: visible
+      @include rempx(margin-top,12)
+      @include transition(opacity 0.30s ease)
+      &:target
+        height: auto
+    ol
+      background-color: darken($dark-gray,10%)
+      background-color: rgba(darken($dark-gray,10%),0.95)
+      @include tablet-portrait-and-up
+        background-color: transparent
+        float: right
+    li
+      @include rempx(padding,24 28)
+      position: relative
+      border-top: 1px solid $dark-gray
+      @include tablet-portrait-and-up
+        display: inline
+        padding: 0
+        border-top: none
+      a
+        @include basic-link($light-gray,$light-gray,$cyan,plain)
+        @include secondary-type
+        @include single-transition(color,0.35s,ease)
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 14
+        @include rempx(padding,12 18)
+        @include tablet-portrait-and-up
+          position: relative
+          @include basic-link(darken($light-gray,30%),darken($light-gray,30%),$cyan,plain)
+
+a.activate-menu
+  color: transparent
+  text-indent: -100000px
+  border: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10
+  @include tablet-portrait-and-up
+    display: none
+
+a.deactivate-menu
+  color: transparent
+  text-indent: -100000px
+  border: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 9
+  @include tablet-portrait-and-up
+    display: none
