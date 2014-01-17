@@ -46,7 +46,7 @@ Mid-project presentations need to be about more than just getting client feedbac
 
 ---
 
-{: .callout}Building better CMS experiences for our clients is simply good business.
+**Building better CMS experiences for our clients is simply good business.**
 
 With a good CMS experience, proper training and follow-up, and making sure a client understands the purpose of their site, we inform and empower them. And that’s a good thing, because informed and empowered clients do two really awesome things:
 
