@@ -78,8 +78,13 @@
   position: relative
   z-index: 0
   @include rempx(padding,90 0)
+  @include transition(padding 0.35s ease)
   @include tablet-portrait-and-up
-    @include rempx(padding,500 0 90)
+    @include rempx(padding,300 0 90)
+  @include desktop-and-up
+    @include rempx(padding,380 0 90)
+  @include monster
+    @include rempx(padding,530 0 90)
   h1
     margin-bottom: 0.6em !important
     a
@@ -123,6 +128,9 @@
       bottom: 0
       background-color: rgba(#000,0.6)
       z-index: 0
+
+.first-post
+  padding-top: 90px
 
 footer
   font-size: 0.8em
