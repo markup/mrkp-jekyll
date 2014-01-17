@@ -242,8 +242,9 @@ section
     background-color: $dark-gray
     background-image: url("/images/Alfonso.jpg")
     background-position: 70% top
-    background-repeat: no-repeat
     background-size: cover
+    background-repeat: no-repeat
+    // background-attachment: fixed
     color: $cyan
     @include type-size(larger)
     @include rempx(padding-top,230)
@@ -256,8 +257,6 @@ section
       @include rempx(padding-top,130)
     @include desktop-and-up
       background-position: center -30px
-      background-size: contain
-      background-attachment: fixed
     @include monster
       background-position: center -100px
   &.philosophy
