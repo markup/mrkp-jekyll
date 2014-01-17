@@ -51,4 +51,4 @@ Mid-project presentations need to be about more than just getting client feedbac
 With a good CMS experience, proper training and follow-up, and making sure a client understands the purpose of their site, we inform and empower them. And that’s a good thing, because informed and empowered clients do two really awesome things:
 
 1. **They don’t bug us with the little things.** We needn’t bother with everyday content maintenance tasks. They’ve been trained, they understand the CMS, they feel secure in their abilities. They got this!
-2. **The come back to us for the big things.** Those big challenges are the ones we live for, and their long-term satisfaction makes their decision to hire us again for future projects a no-brainer. Doubleplusgood!
+2. **They come back to us for the big things.** Those big challenges are the ones we live for, and their long-term satisfaction makes their decision to hire us again for future projects a no-brainer. Doubleplusgood!
