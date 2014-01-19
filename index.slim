@@ -202,6 +202,10 @@ section#ideas.ideas
       p {{ site.posts.first.excerpt }}
       p
         a href="{{ site.posts.first.url }}" title="Go read ‘{{ site.posts.first.title }}’" Read more…
+  figure.post-image
+    img src="{{ site.posts.first.image }}" alt=""
+    figcaption.container
+      | {{ site.posts.first.image-caption }}
 
 section#contact.contact
   .container

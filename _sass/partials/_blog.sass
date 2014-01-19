@@ -116,36 +116,41 @@
   .meta
     @include secondary-type
     color: $cyan
-  figure
+
+.post-image
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+  z-index: -1
+  .container
+    z-index: 1
+    @include rempx(padding, 0 18)
+  img
+    width: auto
+    min-width: 100%
+    height: auto
+    min-height: 100%
+    display: block
+  figcaption
+    position: absolute
+    bottom: 8px
+    z-index: 10
+    color: #fff
+    @include secondary-type
+    a
+      @include basic-link($cyan, $cyan, $cyan, plain)
+  &::after
+    content: " "
     position: absolute
     top: 0
     left: 0
     right: 0
     bottom: 0
-    overflow: hidden
-    z-index: -1
-    img
-      width: auto
-      min-width: 100%
-      height: auto
-      min-height: 100%
-      display: block
-    figcaption
-      position: absolute
-      bottom: 8px
-      z-index: 10
-      @include secondary-type
-      a
-        @include basic-link($cyan, $cyan, $cyan, plain)
-    &::after
-      content: " "
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background-color: rgba(#000,0.6)
-      z-index: 0
+    background-color: rgba(#000,0.6)
+    z-index: 0
 
 .first-post
   @include rempx(padding-top,90)
