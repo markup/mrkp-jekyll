@@ -15,7 +15,6 @@ They dump content where it doesn’t belong, spend countless hours figuring out 
 
 While planning one of my recent projects, I had the opportunity to dwell on this a bit. I considered some of the horror stories I’ve heard from clients (including the one I was working with) as well as some of my own past missteps, and I think a big part of the problem lies in the way we deliver Content Management Systems. Here’s what I think it boils down to.
 
----
 ## WYSInotWYG
 WYSIWYG editors are pretty powerful these days. They can deliver pristine markup, offer clickable tools to add classes and styles, limit the HTML elements people can use, provide templates with pre-defined and pre-populated blocks of content, and —most importantly— provide an accurate, live preview of what the content will look like on the front-end. In my experience, however, many developers deliver WYSIWYG editors with stock stylesheets bearing no resemblance to the front-end, unrestricted access to any number of style modifications (often —if not always— applied with the less-than-desirable `<span style="[…]"></span>` or similar), and no assistive tools to help structure content in ways that comply with the styles and tone set forth by the design.
 
@@ -29,7 +28,6 @@ A properly configured WYSIWYG editor plays a huge role in making our clients’ 
 
 If we go the extra mile on only one thing, let it be the WYSIWYG editor.
 
----
 ## Our solutions are often prescriptive.
 There’s a saying about how everything’s a nail to the guy holding a hammer, or something to that effect. Let’s not be the guy holding a hammer.
 
@@ -44,18 +42,16 @@ I’m not advocating for the creation of bespoke CMS solutions for each project.
 3. Create content creation forms for specific types of content. If one of the content types is Staff Members, for example, the form should be reflective of the needs of this type of entry (e.g. portrait, position, bio, projects they’ve worked on); it shouldn’t look like the form for publishing a news article.
 4. Where ever possible, use drop-down menus, multi-select menus, searches and other UI elements to select featured or related content. This keeps the client from fudging up a link and saves them from having to write (and fudge up) content twice. It also allows you to control which categories or types of content can be highlighted or featured on a home page carrousel (for example), as well as do nifty things like setting rules to determine whether something shows up (e.g. if expired, don’t show content). Triple win!
 
----
 ## Post-launch support as an add-on.
 I’ve met with prospective clients whose previous developers handed a website off with literally not a single minute of training. Just an email saying _”Here are your login credentials. Great doing business with you!”_ Awesome job there, bub. When asking for support or at least an introduction to their CMS, the client is presented with an estimate for a support contract. **Stellar job there, bub.**
 
 Of course, proper training and post-launch support costs money. I wouldn’t suggest we need to be giving away our time and effort. Yet these costs should be factored in from the beginning, itemized in our estimates and described in our proposals, so the client knows that (1) they won’t be left in the dark post-launch, and (2) they won’t be surprised with added cost. I’d wager that very few cients would choose to do without training and support just to save a bit of cash, and those who do at least _know_ they won’t be getting it.
 
----
 ## We don’t let clients in on the _why_s and _why not_s until it’s too late.
 Mid-project presentations need to be about more than just getting client feedback on what their site looks like and how it behaves under certain circumstances. We need to get them on-board with us regarding what the site _is_ and, more importantly, what the site _is not_. Early discussions about where different types of content should go, what the function of each section is, and the value of using the appropriate spaces for each type of content will go a long way towards establishing content publishing guidelines. Granted: some clients will still stray from these guidelines. In those cases, those post-launch support calls and training sessions I mentioned above provide plenty of opportunity to go over them again.
 
-{: .callout}Building better CMS experiences for our clients is simply good business.
-
+---
+## Building better CMS experiences for our clients is simply good business.
 With a good CMS experience, proper training and follow-up, and making sure a client understands the purpose of their site, we inform and empower them. And that’s a good thing, because informed and empowered clients do two really awesome things:
 
 1. **They don’t bug us with the little things.** We needn’t bother with everyday content maintenance tasks. They’ve been trained, they understand the CMS, they feel secure in their abilities. They got this!
