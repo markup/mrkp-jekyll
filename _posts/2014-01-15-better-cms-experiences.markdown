@@ -7,9 +7,11 @@ image: "/images/blog/control-room.jpg"
 image-caption: 'Photo Credit: <a href="http://www.flickr.com/photos/10614970@N07/4736217078/">howzey</a> via <a href="http://compfight.com">Compfight</a> <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a>'
 ---
 
-We strive to deliver the best experiences for our clients’ users. Websites are snappy and responsive, content is accessible and presented beautifully, launch goes without a hitch. The project is a success… Eventually, our client gets their hands on it and they have no idea what they’re doing, so they improvise: They dump content where it doesn’t belong, spend countless hours figuring out how the formatting on the editor will translate to the front-end, and finally come up with a list of little tricks that make the site behave in a certain way that is contrary to our intentions, but which they think somehow enhances the content. And that’s when the site loses its luster.
+We strive to deliver the best experiences for our clients’ users. Websites are snappy and responsive, content is accessible and presented beautifully, launch goes without a hitch. The project is a success… Eventually, our client gets their hands on it and they have no idea what they’re doing, so they improvise.
 
-{: .callout}More times than not, that’s our fault.
+They dump content where it doesn’t belong, spend countless hours figuring out how the formatting on the editor will translate to the front-end, and finally come up with a list of little tricks that make the site behave in a way that is contrary to its design, but which they think it’s how it _should_ behave. And that’s when the site loses its luster.
+
+{: .callout}More times than not, that’s our&nbsp;fault.
 
 I’ve thought about this a bit, considered some of the horror stories I’ve heard as well as some of my own missteps, and here’s what I think it boils down to.
 
