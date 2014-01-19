@@ -13,7 +13,7 @@ They dump content where it doesn’t belong, spend countless hours figuring out 
 
 {: .callout}More times than not, that’s our&nbsp;fault.
 
-I’ve thought about this a bit, considered some of the horror stories I’ve heard as well as some of my own missteps, and here’s what I think it boils down to.
+While planning one of my recent projects, I had the opportunity to dwell on this a bit. I considered some of the horror stories I’ve heard from clients (including the one I was working with) as well as some of my own past missteps, and I think a big part of the problem lies in the way we deliver Content Management Systems. Here’s what I think it boils down to.
 
 ---
 ## WYSInotWYG
@@ -60,3 +60,7 @@ With a good CMS experience, proper training and follow-up, and making sure a cli
 
 1. **They don’t bug us with the little things.** We needn’t bother with everyday content maintenance tasks. They’ve been trained, they understand the CMS, they feel secure in their abilities. They got this!
 2. **They come back to us for the big things.** Those big challenges are the ones we live for, and their long-term satisfaction makes their decision to hire us again for future projects a no-brainer. Doubleplusgood!
+
+*[WYSIWYG]: What You See Is What You Get
+*[CMS]:     Content Management System
+*[UI]:      User Interface
