@@ -48,6 +48,7 @@
       margin: 18px 0
       @include mobile-landscape-and-up
         @include rempx(padding,36 0 40)
+        font-size: $largest-type*0.8px
         margin: 36px 10%
         width: auto !important
 
@@ -147,7 +148,7 @@
       z-index: 0
 
 .first-post
-  padding-top: 90px
+  @include rempx(padding-top,90)
 
 footer
   font-size: 0.8em
