@@ -11,7 +11,7 @@ section.post-intro
     p.meta.container
       | {{ page.date | date_to_string }}
       | {% capture truncated_content %}
-      |   {{ page.content | truncatewords: 250 }}
+      |   {{ page.content | truncatewords: 360 }}
       | {% endcapture %}
       | {% if page.content != truncated_content %}
       |    — Reading time: about 

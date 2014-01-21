@@ -9,11 +9,11 @@ section.first-post
     p.meta.container
       | {{ site.posts.first.date | date_to_string }}
       | {% capture truncated_content %}
-      |   {{ site.posts.first.content | truncatewords: 250 }}
+      |   {{ site.posts.first.content | truncatewords: 360 }}
       | {% endcapture %}
       | {% if site.posts.first.content != truncated_content %}
       |    — Reading time: about 
-      |   {{ site.posts.first.content | number_of_words | divided_by:180 | append: 'min' }}
+      |   {{ site.posts.first.content | number_of_words | divided_by:180 | append: ' min.' }}
       | {% endif %}
     h1.container
       a href="{{ site.posts.first.url }}"
@@ -28,11 +28,19 @@ section.first-post
 
 .blog-index.container
   section.posts
-    // h1 Previous Blog Posts
+    h1 Previous Blog Posts
     {% for post in site.posts %}
     {% if post.url != site.posts.first.url %}
     article
-      p.meta {{ post.date | date_to_string }} {{  }}
+      p.meta
+        | {{ post.date | date_to_string }}
+        | {% capture truncated_content %}
+        |   {{ post.content | truncatewords: 360 }}
+        | {% endcapture %}
+        | {% if post.content != truncated_content %}
+        |    — Reading time: about 
+        |   {{ post.content | number_of_words | divided_by:180 | append: ' min.' }}
+        | {% endif %}
       h2
         a href="{{ post.url }}" {{ post.title }}
       p {{ post.excerpt }}
