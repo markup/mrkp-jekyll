@@ -13,7 +13,7 @@ section
   color: $cyan
   @include type-size(larger)
   @include rempx(padding-top,230)
-  @include transition(padding-top 0.35s ease)
+  @include transition(padding-top $animation)
   p
     @include rempx(max-width,420)
   a
@@ -163,7 +163,7 @@ section
   figure
     display: block
     position: relative
-    @include transition(margin 0.35s ease, width 0.35s ease)
+    @include transition(margin $animation, width $animation)
     &::before
       content: " "
       position: absolute
@@ -205,14 +205,14 @@ section
       right: 0
       bottom: 0
       z-index: 10
-      @include transition(color 0.35s ease,z-index 0s ease)
+      @include transition(color $animation,z-index 0s ease)
   @include tablet-landscape-and-up
     &::after
       @include rempx(padding-top,120)
   &:hover::after
     color: transparent !important
     z-index: 0
-    @include transition(color 0.35s ease,z-index 0s ease 0.35s)
+    @include transition(color $animation,z-index 0s ease 0.35s)
 
 .laptop
   @include proportional-magic(58%)
@@ -279,7 +279,7 @@ section
   a.launch-project
     color: $wfgc-back !important
     background-color: $wfgc-fore
-    @include transition(color 0.35s ease)
+    @include transition(color $animation)
     &:hover
       color: #fff !important
 
@@ -296,7 +296,7 @@ section
   a.launch-project
     color: #000 !important
     background-color: $phive
-    @include transition(color 0.35s ease)
+    @include transition(color $animation)
     &:hover
       color: #fff !important
 
@@ -311,7 +311,7 @@ section
   a.launch-project
     color: $sow-back !important
     background-color: $sow-fore
-    @include transition(color 0.35s ease)
+    @include transition(color $animation)
     &:hover
       color: #fff !important
 
@@ -325,7 +325,7 @@ section
   a.launch-project
     color: $gridwell-back !important
     background-color: $gridwell-fore
-    @include transition(color 0.35s ease)
+    @include transition(color $animation)
     &:hover
       color: #000 !important
 
@@ -341,7 +341,7 @@ section
   a.launch-project
     color: $soloff-back !important
     background-color: $soloff-fore
-    @include transition(color 0.35s ease)
+    @include transition(color $animation)
     &:hover
       color: #bbb !important
 
