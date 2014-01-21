@@ -111,8 +111,9 @@
     @include rempx(padding,530 0 90)
   h1
     margin-bottom: 0.6em !important
-    a
-      @include basic-link(#fff,#fff,#fff,plain)
+    a:link, a:visited, a:hover
+      color: #fff
+      border-bottom: none
   a
     @include basic-link($cyan)
   .excerpt
