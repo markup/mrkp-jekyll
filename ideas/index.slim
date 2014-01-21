@@ -26,15 +26,15 @@ section.first-post
     figcaption.container
       | {{ site.posts.first.image-caption }}
 
-//.blog-index.container
-//  section.posts
-//    // h1 Previous Blog Posts
-//    {% for post in site.posts %}
-//    {% if post.url != site.posts.first.url %}
-//    article
-//      p.meta {{ post.date | date_to_string }} {{  }}
-//      h2
-//        a href="{{ post.url }}" {{ post.title }}
-//      p {{ post.excerpt }}
-//    {% endif %}
-//    {% endfor %}
+.blog-index.container
+  section.posts
+    // h1 Previous Blog Posts
+    {% for post in site.posts %}
+    {% if post.url != site.posts.first.url %}
+    article
+      p.meta {{ post.date | date_to_string }} {{  }}
+      h2
+        a href="{{ post.url }}" {{ post.title }}
+      p {{ post.excerpt }}
+    {% endif %}
+    {% endfor %}

@@ -15,7 +15,7 @@ section.post-intro
       | {% endcapture %}
       | {% if page.content != truncated_content %}
       |    — Reading time: about 
-      |   {{ page.content | number_of_words | divided_by:180 | append: 'min' }}
+      |   {{ page.content | number_of_words | divided_by:180 | append: ' min.' }}
       | {% endif %}
     h1.container
       | {{ page.title }}
