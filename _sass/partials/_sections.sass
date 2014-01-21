@@ -64,122 +64,6 @@ section
         @include rempx(padding,90 0)
         position: relative
         @include clearfix
-    .showcase
-      width: 100%
-      @include tablet-portrait-and-up
-        position: absolute
-        top: 0
-        bottom: 0
-        width: 60%
-    figure
-      display: block
-      position: relative
-      @include transition(margin 0.35s ease, width 0.35s ease)
-      &::before
-        content: " "
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        background-repeat: no-repeat
-        background-size: contain
-        background-position: center top
-        z-index: 10
-      .mask
-        overflow-x: hidden
-        overflow-y: hidden
-        border: 1px solid #ededed
-        position: relative
-        z-index: 10
-        &::-webkit-scrollbar
-          display: none
-        img
-          display: block
-          width: 100%
-          z-index: 5
-        @include mobile-landscape-and-up
-          overflow-y: auto !important
-      &.scroll
-        @include mobile-landscape-and-up
-          &::after
-            content: "⇕"
-            color: rgba(#fff,0.8)
-            text-align: center
-            font-weight: bold
-            @include rempx(font-size,72)
-            @include rempx(padding-top,70)
-            font-style: normal
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            z-index: 10
-            @include transition(color 0.35s ease,z-index 0s ease)
-        @include tablet-landscape-and-up
-          &::after
-            @include rempx(padding-top,120)
-      &:hover
-        &.scroll
-          &::after
-            color: transparent !important
-            z-index: 0
-            @include transition(color 0.35s ease,z-index 0s ease 0.35s)
-      &.laptop
-        @include proportional-magic(58%)
-        width: 92%
-        margin: 6% auto
-        .mask
-          height: 80%
-          width: 74%
-          margin: 2.9% auto
-          img
-            display: block
-            width: 100%
-        &::before
-          background-image: url("/images/devices_laptop.png")
-        @include tablet-portrait-and-up
-          width: 94%
-          margin-left: 19%
-          margin-right: 0
-          float: right
-          @include rempx(margin-top,90)
-          @include rempx(max-width,1000)
-        @include tablet-landscape-and-up
-          margin-bottom: -10%
-      &.tablet
-        @include proportional-magic(180%)
-        // position: absolute
-        width: 36%
-        margin: -30% 0 0 24%
-        float: left
-        .mask
-          height: 76%
-          width: 84%
-          margin: 12% auto
-        &::before
-          background-image: url("/images/devices_tablet.png")
-        @include tablet-portrait-and-up
-          width: 34%
-          @include rempx(max-width,380)
-        @include tablet-landscape-and-up
-          margin-top: -19%
-          margin-right: 12%
-      &.phone
-        @include proportional-magic(180%)
-        // position: absolute
-        width: 24%
-        margin: -16% -20%
-        .mask
-          height: 76%
-          width: 84%
-          margin: 18% auto
-        &::before
-          background-image: url("/images/devices_phone.png")
-        @include tablet-portrait-and-up
-          width: 28%
-          @include rempx(max-width,240)
     .highlight
       @include type-size(larger)
     &.right-layout
@@ -268,6 +152,124 @@ section
   @include border-radius(2px)
   @include rempx(padding,18 0)
 
+.showcase
+  width: 100%
+  @include clearfix
+  @include tablet-portrait-and-up
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 60%
+  figure
+    display: block
+    position: relative
+    @include transition(margin 0.35s ease, width 0.35s ease)
+    &::before
+      content: " "
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center top
+      z-index: 10
+
+.mask
+  overflow-x: hidden
+  overflow-y: hidden
+  border: 1px solid #ededed
+  position: relative
+  z-index: 10
+  &::-webkit-scrollbar
+    display: none
+  img
+    display: block
+    width: 100%
+    z-index: 5
+  @include tablet-portrait-and-up
+    overflow-y: auto !important
+
+.scroll
+  @include tablet-portrait-and-up
+    &::after
+      content: "⇕"
+      color: rgba(#fff,0.8)
+      text-align: center
+      font-weight: bold
+      @include rempx(font-size,72)
+      @include rempx(padding-top,70)
+      font-style: normal
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 10
+      @include transition(color 0.35s ease,z-index 0s ease)
+  @include tablet-landscape-and-up
+    &::after
+      @include rempx(padding-top,120)
+  &:hover::after
+    color: transparent !important
+    z-index: 0
+    @include transition(color 0.35s ease,z-index 0s ease 0.35s)
+
+.laptop
+  @include proportional-magic(58%)
+  width: 92%
+  @include rempx(margin,90 auto 0)
+  @include tablet-portrait-and-up
+    width: 94%
+    margin-right: 0
+    float: right
+    @include rempx(max-width,1000)
+  @include tablet-landscape-and-up
+    // margin-bottom: -10%
+  .mask
+    height: 80%
+    width: 74%
+    margin: 2.9% auto
+  &::before
+    background-image: url("/images/devices_laptop.png")
+
+.tablet
+  @include proportional-magic(165%)
+  // position: absolute
+  width: 36%
+  margin: -20% 0 0 18%
+  float: left
+  @include tablet-portrait-and-up
+    width: 40%
+    margin: 0 0 0 10%
+    @include rempx(max-width,380)
+  @include tablet-landscape-and-up
+    margin-top: -10%
+    // margin-right: 12%
+  .mask
+    height: 83%
+    width: 84%
+    margin: 12% auto
+  &::before
+    background-image: url("/images/devices_tablet.png")
+
+.phone
+  @include proportional-magic(165%)
+  // position: absolute
+  width: 24%
+  margin: 0% 3%
+  float: left
+  @include tablet-portrait-and-up
+    width: 28%
+    @include rempx(max-width,240)
+  .mask
+    height: 76%
+    width: 84%
+    margin: 18% auto
+  &::before
+    background-image: url("/images/devices_phone.png")
+
 #wfgc
   background-color: $wfgc-back
   h2, h3, .highlight
@@ -322,8 +324,6 @@ section
     color: $gridwell-fore
   a
     @include basic-link($gridwell-fore)
-  figure
-    background-image: url("/images/work_gridwell.jpg")
   a.launch-project
     color: $gridwell-back !important
     background-color: $gridwell-fore
