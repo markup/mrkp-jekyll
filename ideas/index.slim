@@ -8,12 +8,19 @@ section.first-post
   .post-header
     p.meta.container
       | {{ site.posts.first.date | date_to_string }}
+      | {% capture truncated_content %}
+      |   {{ site.posts.first.content | truncatewords: 250 }}
+      | {% endcapture %}
+      | {% if site.posts.first.content != truncated_content %}
+      |    — Reading time: about 
+      |   {{ site.posts.first.content | number_of_words | divided_by:180 | append: 'min' }}
+      | {% endif %}
     h1.container
       a href="{{ site.posts.first.url }}"
         | {{ site.posts.first.title }}
     p.excerpt.container
-      | {{ site.posts.first.excerpt }} &raquo; 
-      a href="{{ site.posts.first.url }}" Read on…
+      | {{ site.posts.first.excerpt }}
+      a href="{{ site.posts.first.url }}" Read&nbsp;on…
   figure.post-image
     img src="{{ site.posts.first.image }}" alt=""
     figcaption.container

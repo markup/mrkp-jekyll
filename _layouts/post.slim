@@ -10,6 +10,13 @@ section.post-intro
   .post-header
     p.meta.container
       | {{ page.date | date_to_string }}
+      | {% capture truncated_content %}
+      |   {{ page.content | truncatewords: 250 }}
+      | {% endcapture %}
+      | {% if page.content != truncated_content %}
+      |    — Reading time: about 
+      |   {{ page.content | number_of_words | divided_by:180 | append: 'min' }}
+      | {% endif %}
     h1.container
       | {{ page.title }}
     p.excerpt.container
