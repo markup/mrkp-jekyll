@@ -5,6 +5,7 @@ date: 2014-01-21 15:00:00
 excerpt: "Say hello to the new /markup blog: /ideas."
 image: "/images/blog/blank-pages.jpg"
 image-caption: 'Photo Credit: <a href="http://www.flickr.com/photos/40645538@N00/4812269151/">Pink Sherbet Photography</a> via <a href="http://compfight.com">Compfight</a> <a href="http://creativecommons.org/licenses/by/2.0/">cc</a>'
+comments: false
 ---
 
 Writing, not unlike teaching, is an excellent learning exercise. I’ve known this for some time now, yet never got around to writing more than a few notes-to-self in snarky commit messages. It’s time I start sharing.
