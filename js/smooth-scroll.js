@@ -51,7 +51,8 @@
       // Function to update URL
       var updateURL = function (url, anchor) {
         if ( url === 'true' && history.pushState ) {
-          history.pushState(null, null, '#' + anchor.id);
+          window.location.hash = '#top';
+          history.replaceState(null, null, '#' + anchor.id);
         }
       };
 
