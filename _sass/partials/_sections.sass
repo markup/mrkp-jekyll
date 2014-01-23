@@ -189,7 +189,7 @@ section
   @include tablet-portrait-and-up
     overflow-y: auto !important
 
-.scroll
+.scrollable
   @include tablet-portrait-and-up
     &::after
       content: "⇕"
@@ -274,7 +274,7 @@ section
     color: $wfgc-fore
   a
     @include basic-link($wfgc-fore)
-  .scroll::after
+  .scrollable::after
     color: rgba($wfgc-fore,0.6)
   a.launch-project
     color: $wfgc-back !important
