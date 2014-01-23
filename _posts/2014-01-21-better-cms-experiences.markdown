@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "We need to deliver better CMS experiences."
+title: "Let’s deliver better CMS experiences."
 date: 2014-01-21 16:00:00
 excerpt: "“I just don’t understand how to use my website’s CMS.” This, or some variation of it, is a gripe I hear all too often from prospective clients. Some of them tell me they’ve never —not since day one— felt confident using their website’s CMS, while others add that requesting support and training from whoever delivered their CMS is something they’d rather not do. What’s up with that?"
 image: "/images/blog/control-room.jpg"
