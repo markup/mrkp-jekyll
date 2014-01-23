@@ -84,7 +84,6 @@
         var currentLocation = window.pageYOffset;
         if ( currentLocation == endLocation || ( (window.innerHeight + currentLocation) >= document.body.scrollHeight ) ) {
           clearInterval(runAnimation);
-          updateURL(url, anchor);
         }
       };
 
@@ -102,6 +101,9 @@
         stopAnimation();
       };
 
+      // Update URL before animating scroll
+      updateURL(url, anchor);
+      
       // Loop the animation function
       var runAnimation = setInterval(animateScroll, 16);
 
