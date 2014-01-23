@@ -52,7 +52,7 @@
       var updateURL = function (url, anchor) {
         if ( url === 'true' && history.pushState ) {
           window.location.hash = '#top';
-          history.replaceState(null, null, '#' + anchor.id);
+          history.replaceState({pos:anchor.id}, '', '#' + anchor.id);
         }
       };
 
