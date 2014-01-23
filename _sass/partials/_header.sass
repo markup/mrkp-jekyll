@@ -23,6 +23,9 @@
       @include rempx(width,164)
       @include rempx(height,48)
       background-image: url("../images/markup-logo.png")
+      @include retina
+        background-image: url("../images/markup-logo-2x.png")
+        background-size: cover
 
   nav
     clear: left
