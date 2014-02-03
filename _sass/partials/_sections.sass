@@ -164,7 +164,7 @@ section
     display: block
     position: relative
     @include transition(margin $animation, width $animation)
-    &::before
+    &:before
       content: " "
       position: absolute
       top: 0
@@ -173,6 +173,7 @@ section
       bottom: 0
       background-repeat: no-repeat
       background-size: contain
+      -ms-behavior: url("/backgroundsize.min.htc")
       background-position: center top
       z-index: 10
 
@@ -191,7 +192,7 @@ section
 
 .scrollable
   @include tablet-portrait-and-up
-    &::after
+    &:after
       content: "⇕"
       color: rgba(#fff,0.8)
       text-align: center
@@ -207,9 +208,9 @@ section
       z-index: 10
       @include transition(color $animation,z-index 0s ease)
   @include tablet-landscape-and-up
-    &::after
+    &:after
       @include rempx(padding-top,120)
-  &:hover::after
+  &:hover:after
     color: transparent !important
     z-index: 0
     @include transition(color $animation,z-index 0s ease 0.35s)
@@ -229,7 +230,7 @@ section
     height: 80%
     width: 74%
     margin: 2.9% auto
-  &::before
+  &:before
     background-image: url("/images/devices_laptop.png")
 
 .tablet
@@ -249,7 +250,7 @@ section
     height: 82%
     width: 84%
     margin: 14% auto
-  &::before
+  &:before
     background-image: url("/images/devices_tablet.png")
 
 .phone
@@ -265,7 +266,7 @@ section
     height: 78%
     width: 81%
     margin: 18% auto
-  &::before
+  &:before
     background-image: url("/images/devices_phone.png")
 
 #wfgc
@@ -274,7 +275,7 @@ section
     color: $wfgc-fore
   a
     @include basic-link($wfgc-fore)
-  .scrollable::after
+  .scrollable:after
     color: rgba($wfgc-fore,0.6)
   a.launch-project
     color: $wfgc-back !important
