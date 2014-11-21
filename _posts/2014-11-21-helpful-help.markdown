@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "It helps to be helpful"
-date: 2014-11-21 09:30:00
+date: 2014-11-21 11:50:00
 excerpt: "By the time a user seeks help, they’ve likely already had a negative experience, to some degree. It’s important, then, that the process of requesting support be easy, predictable, and without friction, lest we turn a customer’s mild annoyance into outright frustration. As usual when crafting a useful user experience, empathy is&nbsp;key."
 image: "/images/blog/bruce-almighty.gif"
 image-caption: 'GIF: Jim Carrey furiously answers an endless stream of what one might consider support requests in Bruce Almighty (2003). Bear with me here.'
