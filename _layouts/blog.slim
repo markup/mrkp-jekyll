@@ -7,6 +7,11 @@ html.no-js lang="en"
         {{ page.title }} | A post on  
       | {% endif %}
       | /ideas — Thoughts on design and development by {{ site.author }}
+    meta property="og:type" content="article"
+    meta property="og:site_name" content="/ideas, the /markup blog"
+    meta property="og:title" content="{{ page.title }}"
+    meta property="og:description" content="{{ page.excerpt }}"
+    meta property="og:image" content="{{ page.image }}"
 body.blog
   | {% slim _blog_header.slim %}
   | {{ content }}
