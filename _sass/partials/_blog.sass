@@ -37,7 +37,7 @@
     margin-top: 0
 
 .post
-  p, h1, h2, h3, h4, h5, h6, ol, ul, blockquote, aside, hr
+  p, h1, h2, h3, h4, h5, h6, ol, ul, blockquote, aside, hr, code
     @include rempx(max-width,680)
     @include rempx(margin,14 auto)
     padding: 0
@@ -58,6 +58,16 @@
         @include rempx(font-size,$largest-type*0.8)
         margin: 36px 10%
         width: auto !important
+
+  blockquote
+    margin-bottom: 3.6em
+    p
+      width: 100%
+      font-size: 1.4em
+      line-height: 1.4em
+      float: none
+      font-style: italic
+      color: lighten($dark-gray,15%)
 
   em
     font-style: italic
