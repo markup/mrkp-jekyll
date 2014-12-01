@@ -13,7 +13,7 @@ comments: false
 
 While working on my [bustime node module](https://www.npmjs.org/package/bustime "First ever node module, FTW!"), I decided to try out [Code Climate](https://codeclimate.com/dashboard) as part of an effort to be more mindful the quality of the work I put out. Code Climate can integrate a test suite into their analysis, but I’m not using tests yet (baby steps, don’t judge!). The reason I signed up is that they offer code analysis going by their [ABC Metric](http://docs.codeclimate.com/article/148-glossary-abc-metric).
 
-The first evaluation gave every file in the project an **A**, except for one file: an object validation submodule which Code Climate gave a scathing **D**. Ouch! Upon reviewing their analysis I learned that the big issue was “method complexity”, but I saw no way to further simplify the code. _It is what it is_, I thought. _I couldn’t possibly make it more straightforward._
+The first evaluation gave every file in the project an **A**, except for one file: an object validation submodule which Code Climate gave a scathing **D**. Ouch! Upon reviewing their analysis I learned that the big issue was “method complexity”, yet I saw no way to further simplify the code. _It is what it is_, I thought. _I couldn’t possibly make it more straightforward._
 
 After mulling it over, researching the problem on [SourceMaking](http://sourcemaking.com/refactoring/long-method), emailing Code Climate support for guidance and even [tweeting about it](https://twitter.com/agarzola/status/537636431619817472) (admittedly in frustration), I found a solution to my conundrum and learned a valuable lesson in the process.
 
